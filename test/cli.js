@@ -1,5 +1,5 @@
 const test = require("ava");
-const { fizzbuzz, range, numberToRainbow } = require("../cli");
+const { fizzbuzz, range, numberToRainbow } = require("..");
 
 test("range", t => {
   t.snapshot(range(0, 15));

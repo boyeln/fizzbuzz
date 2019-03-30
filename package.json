@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "FizzBuzz CLI",
   "main": "index.js",
+  "bin": "./cli.js",
   "license": "MPL-2.0",
   "author": "Boye Borg <boye.borg@icloud.com>",
   "publishConfig": {
