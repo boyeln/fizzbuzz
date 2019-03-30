@@ -1,4 +1,5 @@
 const meow = require("meow");
+const { fizzbuzz } = require("./cli");
 
 const cli = meow(`
   Usage
@@ -24,16 +25,5 @@ if (cli.input.length !== 1 || isNaN(cli.input[0])) {
 const to = parseInt(cli.input[0], 10);
 
 for (let i = 1; i <= parseInt(cli.input[0], 10); i++) {
-  const fizz = i % 3 === 0;
-  const buzz = i % 5 === 0;
-
-  if (fizz && buzz) {
-    console.log("FizzBuzz");
-  } else if (fizz) {
-    console.log("Fizz");
-  } else if (buzz) {
-    console.log("Buzz");
-  } else {
-    console.log(i);
-  }
+  console.log(fizzbuzz(i));
 }
