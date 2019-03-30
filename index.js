@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const meow = require("meow");
 const { fizzbuzz, range, numberToRainbow } = require("./cli");
 
