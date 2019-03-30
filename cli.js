@@ -12,6 +12,7 @@ const cli = meow(
       --raindow, -r   Use beautiful rainbows instead of dull numbers.
       --from, -f      Start fizzbuzzing from a specific value. Default: 1
       --help          Shows this text.
+      --version       Display current version.
     
     Example
       $ fizzbuzz 15 -rf 10
