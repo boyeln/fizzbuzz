@@ -1,12 +1,14 @@
 const meow = require("meow");
 const { fizzbuzz } = require("./cli");
 
-const cli = meow(`
+const cli = meow(
+  `
   Usage
-    $ fizzbuzz n [options]
+    $ fizzbuzz to [options]
 
     Options
-      --help  Shows this text
+      --from, -f  Start fizzbuzzing from a specific value. Default: 1
+      --help      Shows this text
     
     Example
       $ fizzbuzz 5
@@ -15,14 +17,25 @@ const cli = meow(`
       Fizz
       4
       Buzz
-`);
+`,
+  {
+    flags: {
+      from: {
+        alias: "f",
+        default: "1",
+        type: "string"
+      }
+    }
+  }
+);
 
-if (cli.input.length !== 1 || isNaN(cli.input[0])) {
+if (cli.input.length !== 1 || isNaN(cli.input[0]) || isNaN(cli.flags["from"])) {
   cli.showHelp();
 }
 
 const to = parseInt(cli.input[0], 10);
+const from = parseInt(cli.flags["from"], 10);
 
-for (let i = 1; i <= parseInt(cli.input[0], 10); i++) {
+for (let i = from; i <= to; i++) {
   console.log(fizzbuzz(i));
 }
