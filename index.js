@@ -1,5 +1,5 @@
 const meow = require("meow");
-const { fizzbuzz } = require("./cli");
+const { fizzbuzz, range } = require("./cli");
 
 const cli = meow(
   `
@@ -36,6 +36,6 @@ if (cli.input.length !== 1 || isNaN(cli.input[0]) || isNaN(cli.flags["from"])) {
 const to = parseInt(cli.input[0], 10);
 const from = parseInt(cli.flags["from"], 10);
 
-for (let i = from; i <= to; i++) {
-  console.log(fizzbuzz(i));
-}
+const output = range(from, to).map(fizzbuzz);
+
+console.log(output.join("\n"));
