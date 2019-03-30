@@ -1,5 +1,5 @@
 const test = require("ava");
-const { fizzbuzz, range } = require("../cli");
+const { fizzbuzz, range, numberToRainbow } = require("../cli");
 
 test("range", t => {
   t.snapshot(range(0, 15));
@@ -12,4 +12,13 @@ test("range", t => {
 
 test("fizzbuzz", t => {
   t.snapshot(range(0, 100).map(fizzbuzz));
+});
+
+test("numberToRainbow", t => {
+  t.is(numberToRainbow(5), "🌈🌈🌈🌈🌈");
+  t.is(numberToRainbow("not number"), "not number");
+
+  // edgecases
+  t.is(numberToRainbow("2"), "🌈🌈");
+  t.is(numberToRainbow(null), "");
 });
