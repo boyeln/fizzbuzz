@@ -4,7 +4,11 @@
   "description": "FizzBuzz CLI",
   "main": "index.js",
   "license": "MPL-2.0",
+  "scripts": {
+		"test": "ava"
+	},
   "devDependencies": {
+    "ava": "^1.4.1",
     "eslint": "^5.15.3",
     "eslint-config-prettier": "^4.1.0",
     "eslint-plugin-prettier": "^3.0.1",
