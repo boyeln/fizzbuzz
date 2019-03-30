@@ -1,6 +1,6 @@
 {
   "name": "@boyeborg/fizzbuzz",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "FizzBuzz CLI",
   "main": "index.js",
   "bin": "./cli.js",
