@@ -18,8 +18,7 @@ const cli = meow(`
 `);
 
 if (cli.input.length !== 1 || isNaN(cli.input[0])) {
-  console.log(cli.help);
-  process.exit(1);
+  cli.showHelp();
 }
 
 const to = parseInt(cli.input[0], 10);
