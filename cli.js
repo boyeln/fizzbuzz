@@ -9,7 +9,7 @@ const cli = meow(
     $ fizzbuzz to [options]
 
     Options
-      --raindow, -r   Use beautiful rainbows instead of dull numbers.
+      --rainbow, -r   Use beautiful rainbows instead of dull numbers.
       --from, -f      Start fizzbuzzing from a specific value. Default: 1
       --help          Shows this text.
       --version       Display current version.
